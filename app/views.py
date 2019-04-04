@@ -9,6 +9,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from .forms import *
 from .email import *
+# from .email import send_welcome_email
 
 
 def homepage(request):

@@ -43,7 +43,8 @@ class Profile(models.Model):
         ordering = ['user']
 
 
-class Neighborhood(models.Model):locality = models.CharField(max_length=30, default="e.g Kigali, Nyagatare, Rusizi")
+class Neighborhood(models.Model):
+    locality = models.CharField(max_length=30, default="e.g Kigali, Nyagatare, Rusizi")
     name = models.CharField(max_length=30)
     occupants_count = models.IntegerField(default=0, blank=True)
     user_profile = models.ForeignKey(User, on_delete=models.CASCADE, related_name='hoods', blank=True)

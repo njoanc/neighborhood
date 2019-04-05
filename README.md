@@ -26,7 +26,7 @@ As a user of the application i should be able to:
 
 * Install python version 3.6.
 * Install Heroku that helps to deploy your application.
-* Clone https://github.com/cherucole/The-Watchtower
+* Clone https://github.com/njoanc/neighborhood.git
 * Atleast have a computer or a laptop
 * Have an internet connection
 * Live app here https://cherucole-watchtower.herokuapp.com/

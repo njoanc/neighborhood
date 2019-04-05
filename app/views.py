@@ -17,8 +17,7 @@ def homepage(request):
         if Join.objects.filter(user_id=request.user).exists():
             hood = Neighborhood.objects.get(pk=request.user.join.hood_id.id)
             posts = Post.objects.filter(post_hood=request.user.join.hood_id.id)
-            businesses = Business.objects.filter(
-                biz_hood=request.user.join.hood_id.id)
+            businesses = Business.objects.filter(biz_hood=request.user.join.hood_id.id)
             return render(request, 'current_hood.html', {"hood": hood, "businesses": businesses, "posts": posts})
         else:
             hoods = Neighborhood.all_neighborhoods()
@@ -60,21 +59,6 @@ def add_hood(request):
     return render(request, 'add_hood.html', {"form": form})
 
 
-@login_required(login_url='/accounts/login/')
-def add_biz(request):
-    current_user = request.user
-    if request.method == 'POST':
-        form = AddBizForm(request.POST, request.FILES)
-        if form.is_valid():
-            biz = form.save(commit=False)
-            biz.biz_owner = current_user
-            biz.biz_hood = request.user.join.hood_id
-            biz.save()
-        return redirect('homepage')
-
-    else:
-        form = AddBizForm()
-    return render(request, 'add_biz.html', {"form": form})
 
 
 @login_required(login_url='/accounts/login/')
@@ -91,6 +75,23 @@ def join_hood(request, hood_id):
         Join(user_id=request.user, hood_id=neighborhood).save()
 
     return redirect('homepage')
+
+
+@login_required(login_url='/accounts/login/')
+def add_biz(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = AddBizForm(request.POST, request.FILES)
+        if form.is_valid():
+            biz = form.save(commit=False)
+            biz.biz_owner = current_user
+            biz.biz_hood = request.user.join.hood_id
+            biz.save()
+        return redirect('homepage')
+
+    else:
+        form = AddBizForm()
+    return render(request, 'add_biz.html', {"form": form})
 
 
 @login_required(login_url='/accounts/login/')

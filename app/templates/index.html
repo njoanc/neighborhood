@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-{% load bootstrap4 %}
+{% load bootstrap3 %}
 {% block content %}
 {{ block.super}}
 {% load staticfiles %}
@@ -26,7 +26,7 @@
 
 <body>
   <div class="container-fluid">
-    <h1 id="mainheading" style="text-align:center;" class="display-4"> Watchtower</h1>
+    <h1 id="mainheading" style="text-align:center;" class="display-4"> Nextdoor</h1>
     <h4>Don't see your hood ?
       Register it <a style="color:#4fc3f7;" href="{% url 'add_hood'  %}">here</a>
     </h4>

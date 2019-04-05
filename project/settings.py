@@ -39,14 +39,14 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 INSTALLED_APPS = [
     'app.apps.AppConfig',
-    'bootstrap4',
+    'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration'
+    'registration',
     'tinymce',
     
 ]

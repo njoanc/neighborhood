@@ -47,11 +47,11 @@ class NeighborhoodTest(TestCase):
 
 class BusinessTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create(id=1, username='cheru')
+        self.user = User.objects.create(id=1, username='jeanne')
         self.profile = Profile.objects.create(
             user=self.user, email='njoanc@gmail.com', contact='mycontact')
 
-        self.biz = Business.objects.create(name='mpesa',
+        self.biz = Business.objects.create(name='photography',
                                            description='available and reliable', email='njoanc@gmail.com')
 
     def test_instance(self):

@@ -8,7 +8,7 @@ class ProfileTest(TestCase):
     def setUp(self):
         self.user = User.objects.create(id=1, username='jeanne')
         self.profile = Profile.objects.create(
-            user=self.user, email='njoanc@gmail.com', contact='mycontact')
+            user=self.user, email='njanc@gmail.com', contact='mycontact')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.profile, Profile))

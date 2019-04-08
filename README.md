@@ -1,4 +1,4 @@
-# The watchtowerNextdoor
+# The neighborhood
 This application was built by Django version 1.11 a python framework.
 
 

@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^search_results/', views.search_results, name='search_results'),
     url(r'^user/(?P<username>\w+)', views.user_profile, name='user_profile'),
     url(r'^new/profile$', views.add_profile, name='add_profile'),
-    
+    url(r'', views.default_map, name="default"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

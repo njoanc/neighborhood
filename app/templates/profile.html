@@ -17,8 +17,9 @@
 
       <div class="card border-secondary">
         <div class="card-footer">
-
-          <img class="rounded-circle img-responsive" width="170" height="170" src="{{profile_info.avatar.url}}" size="">
+          {% if profile_info.avatar %}
+            <img class="rounded-circle img-responsive" width="170" height="170" src="{{profile_info.avatar.url}}" size="">
+          {% endif %}
           <br>
 
 

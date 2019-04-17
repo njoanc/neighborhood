@@ -65,7 +65,6 @@ DATABASES['default'].update(db_from_env)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 INSTALLED_APPS = [
-    # 'decouple',
     'app.apps.AppConfig',
     'bootstrap3',
     'django.contrib.admin',
@@ -74,7 +73,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration',
     'tinymce',
     
     

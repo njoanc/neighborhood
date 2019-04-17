@@ -11,6 +11,7 @@ class Profile(models.Model):
     contact = HTMLField()
     email = models.EmailField(max_length=70, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    locality = models.CharField(max_length=30, default="e.g Kigali, Nyagatare, Rusizi")
     '''
     this is added to ensure the linter has no errors saying class has no objects member in VS Code IDE
     '''

@@ -85,7 +85,7 @@ def add_biz(request):
         if form.is_valid():
             biz = form.save(commit=False)
             biz.biz_owner = current_user
-            biz.biz_hood = request.user.join.hood_id
+            # biz.biz_hood = request.user.Join.hood_id
             biz.save()
         return redirect('homepage')
 

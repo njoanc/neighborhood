@@ -29,7 +29,7 @@ As a user of the application i should be able to:
 * Clone https://github.com/njoanc/neighborhood.git
 * Atleast have a computer or a laptop
 * Have an internet connection
-* 
+## Heroku link: https://skyowe.herokuapp.com/
 
 * install Django
 
